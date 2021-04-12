@@ -1,0 +1,36 @@
+#include <iostream>
+#include "Deque.h"
+#include "Deque_int.h"
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+
+	Deque<int> d;
+	d.PushFront(4);
+	d.PushBack(1);
+	d.PushFront(11);
+	d.PushBack(7);
+	d.PushBack(2);
+
+	cout << d;
+	cout << "Первый элемент c начала : " << d.PeekFront() << endl
+		<< 	"первый элемент с конца : " << d.PeekBack() << endl
+		<< "всего элементов : " << d.GetSize() << endl;
+
+	Deque_int d_i;
+	d_i.PushFront(4);
+	d_i.PushBack(1);
+	d_i.PushFront(11);
+	d_i.PushBack(7);
+	d_i.PushBack(2);
+
+	cout << d_i;
+	cout << "Первый элемент c начала : " << d_i.PeekFront() << endl
+		<< "первый элемент с конца : " << d_i.PeekBack() << endl
+		<< "всего элементов : " << d_i.GetSize() << endl;
+
+	return 0;
+}
